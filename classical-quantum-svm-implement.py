@@ -63,5 +63,7 @@ total_arr = np.concatenate((test_dataset['A'],test_dataset['B'],test_dataset['C'
 alg_input = ClassificationInput(training_dataset, test_dataset, total_arr)
 %time result = run_algorithm(params, algo_input=alg_input, backend=backend)
 
+for k, v in result.items():
+    print("'{}' : {}".format(k,v))
 
 
